@@ -15,7 +15,7 @@ class PrimeNumberGenerator {
       }
     }
   
-    sieveOfEratosthenes(start, end) {
+    sieveOfEratosthenes(start, end) {                // Time Complexity O(N*log(log(N)))  and Space Complexity O(N)
         let primes = [];
         primes[0] = primes[1] = false;
         for(let i = 2; i <= end; i++){
@@ -41,7 +41,7 @@ class PrimeNumberGenerator {
     
     
     // Sieve of Sundaram algorithm
-     sieveOfSundaram(start, end) {
+     sieveOfSundaram(start, end) {                               // Time Complexity O(N*logN)  and Space Complexity O((N-1)/2)
         // Adjust the upper limit to produce enough primes
         const limit = Math.floor((end - 1) / 2);
     
@@ -82,7 +82,7 @@ class PrimeNumberGenerator {
     
     
     // Trial division algorithm
-    trialDivision(start, end) {
+    trialDivision(start, end) {                         // Time Complexity O(N*sqrt(N))  and Space Complexity O(1)
         const primes = [];
         for (let i = 2; i <= end; i++) {
             let isPrime = true;
